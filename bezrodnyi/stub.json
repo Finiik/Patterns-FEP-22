@@ -1,0 +1,15 @@
+{
+"customers":
+        [
+            {"id_": 0,
+              "first_name": "test_name_0",
+              "second_name": "test_second_name_0",
+              "age": 30
+            },
+            {"id_": 1,
+            "first_name": "test_name_1",
+            "second_name": "test_second_name_1",
+            "age": 30
+            }
+        ]
+}
