@@ -1,0 +1,32 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Sofiya",
+      "age": 17,
+      "limit": 1000.0
+    },
+    {
+      "id": 2,
+      "name": "Andriy",
+      "age": 25,
+      "limit": 1500.0
+    }
+  ],
+  "operators": [
+    {
+      "id": 1,
+      "talkingCharge": 0.15,
+      "messageCost": 0.05,
+      "networkCharge": 0.5,
+      "discountRate": 15
+    },
+    {
+      "id": 2,
+      "talkingCharge": 0.25,
+      "messageCost": 0.1,
+      "networkCharge": 0.7,
+      "discountRate": 10
+    }
+  ]
+}
