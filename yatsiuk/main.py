@@ -22,3 +22,4 @@ if __name__ == '__main__':
     customer.talk(1,companion,0)
     customer.message(1,companion,0)
     customer.connect(1,companion,0)
+    # all done
