@@ -33,3 +33,4 @@ class Operator:
     
     def calc_network_charge(self, data_size: int) -> float:
         return self.network_charge * data_size
+# all done
