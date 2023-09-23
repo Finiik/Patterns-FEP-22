@@ -1,0 +1,3 @@
+що би встановити json треба в visual studio зайти в 
+Tools -> NuGet package Manager -> Manage NuGet Package Solution 
+потім зайти в Browse і написати nlohmann.json і установити до цього проекту
