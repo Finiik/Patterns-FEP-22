@@ -1,0 +1,20 @@
+[
+    {
+        "container_id": "C1",
+        "weight": 2500,
+        "container_type": "BasicContainer"
+    },
+    {
+        "container_id": "C2",
+        "weight": 3500,
+        "container_type": "HeavyContainer"
+    },
+    {
+        "container_id": "C3",
+        "weight": 4000,
+        "container_type": "HeavyContainer"
+    }
+]
+
+
+

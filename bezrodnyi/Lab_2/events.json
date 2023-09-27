@@ -1,0 +1,17 @@
+[
+    {
+        "event_type": "load_container",
+        "ship_id": "S1",
+        "container_id": "C1"
+    },
+    {
+        "event_type": "load_container",
+        "ship_id": "S2",
+        "container_id": "C2"
+    },
+    {
+        "event_type": "sail_to_port",
+        "ship_id": "S1",
+        "destination_port": "P2"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "ship_id": "S1",
+        "port_id": "P1",
+        "max_weight": 10000,
+        "max_containers": 5,
+        "max_heavy_containers": 2,
+        "max_refrigerated": 1,
+        "max_liquid": 1,
+        "fuel_consumption": 0.1
+    },
+    {
+        "ship_id": "S2",
+        "port_id": "P2",
+        "max_weight": 12000,
+        "max_containers": 6,
+        "max_heavy_containers": 3,
+        "max_refrigerated": 1,
+        "max_liquid": 1,
+        "fuel_consumption": 0.15
+    }
+]
