@@ -1,1 +1,0 @@
-bills.json, bills.py, customer.py, main.py, operators.json, operators.py - lab_1
