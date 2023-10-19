@@ -1,8 +1,9 @@
 import json
 from factory import ItemFactory, ShipFactory
-from item import Small
 from factory import ItemFactory
+from item import ItemDecorator
 from port import Port
+
 
 def simulate_port_management():
     # Створення порту
@@ -15,24 +16,27 @@ def simulate_port_management():
     # Створення предметів
     small_item = ItemFactory.createSmallItem(6, 16, 5, 2254)
 
-    # Завантаження контейнерів на корабель та розвантаження
-    port.loadContainers([small_item])
+    # Створення декоратора для предмета в контейнері
+    small_item_in_container = ItemDecorator(small_item, 6, 16, 5, 2254)
+
+    # Завантаження контейнера на корабель та розвантаження
+    port.loadContainers([small_item_in_container])
     ship.loadItems(port.unloadContainers(ship))
 
-    # Виведення результатів у JSON, включаючи інформацію про предмети
+    # Виведення результатів у JSON, включаючи інформацію про контейнери та предмети
     result = {
         "Назва порта": port.Name,
         "Координати порту": port.Coordinates,
         "Тип корабля": ship.Type,
         "Вага коробля": ship.weight,
         "Ємність паливного баку": ship.fuel_capacity,
-        "Предмети": [
+        "Контейнер інфо": [
             {
-                "Тип": small_item.item_type,
-                "ID": small_item.ID,
-                "Вага": small_item.weight,
-                "Кількість": small_item.count,
-                "ID контейнера": small_item.containerID,
+                "Тип": small_item_in_container.item.item_type,
+                "ID": small_item_in_container.item.ID,
+                "Вага контейнера": small_item_in_container.item.weight,
+                "Кількість предметів в контейнері": small_item_in_container.item.count,
+                "ID контейнера": small_item_in_container.item.containerID,
             }
         ],
     }
