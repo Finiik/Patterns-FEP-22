@@ -1,0 +1,54 @@
+
+[
+    {
+    "Id": 0,
+    "Latitude": 120.230,
+    "Longitude": 80.234
+    
+    },
+    {
+      "Id": 1,
+      "Latitude": 37.774,
+      "Longitude": 122.419
+    },
+    {
+      "Id": 2,
+      "Latitude": 34.052,
+      "Longitude": 118.243
+    },
+    {
+      "Id": 3,
+      "Latitude": 40.712,
+      "Longitude": 74.006
+    },
+    {
+      "Id": 4,
+      "Latitude": 41.878,
+      "Longitude": 87.629
+    },
+    {
+      "Id": 5,
+      "Latitude": 51.507,
+      "Longitude": 0.127
+    },
+    {
+      "Id": 6,
+      "Latitude": 48.856,
+      "Longitude": 2.352
+    },
+    {
+      "Id": 7,
+      "Latitude": 55.755,
+      "Longitude": 37.617
+    },
+    {
+      "Id": 8,
+      "Latitude": 35.682,
+      "Longitude": 139.759
+    },
+    {
+      "Id": 9,
+      "Latitude": 25.276,
+      "Longitude": 51.520
+    }
+]

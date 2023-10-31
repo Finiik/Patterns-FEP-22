@@ -1,0 +1,58 @@
+[
+  {
+    "Id": 0,
+    "Type": "R",
+    "Weight": 120
+  }
+,{
+  "Id": 1,
+  "Weight": 1209,
+  "Type": "L"
+}
+,{
+  "Id": 2,
+  "Weight": 890,
+  "Type": ""
+}
+,{
+  "Id": 3,
+  "Weight": 678954,
+  "Type": "R"
+}
+,{
+  "Id": 4,
+  "Weight": 4537,
+  "Type": "L"
+}
+,{
+  "Id": 5,
+  "Weight": 921,
+  "Type": ""
+}
+,{
+  "Id": 6,
+  "Weight": 1209,
+  "Type": "L"
+}
+,{
+  "Id": 7,
+  "Weight": 865,
+  "Type": "R"
+}
+,{
+  "Id": 8,
+  "Weight": 254,
+  "Type": ""
+}
+,{
+  "Id": 9,
+  "Weight": 7532,
+  "Type": "L"
+}
+,{
+  "Id": 10,
+  "Weight": 930,
+  "Type": "R"
+}
+]
+

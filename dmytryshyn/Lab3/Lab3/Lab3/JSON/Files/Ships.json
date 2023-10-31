@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Id": 5,
+
+    "Fuel": 10.6,
+
+    "ShipLimitsCharacteristics": {
+
+      "TotalWeightCapacity": 150000,
+
+      "MaxNumberOfAllContainers": 10,
+
+      "MaxNumberOfHeavyContainers": 4,
+
+      "MaxNumberOfRefrigeratedContainers": 2,
+
+      "MaxNumberOfLiquidContainers": 4
+    },
+
+    "Type": 1
+  }
+]
