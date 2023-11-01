@@ -132,14 +132,13 @@ class Ship(IShip):
             for current_port in self.port:
                 if isinstance(current_containers_on_ship[i], str):
                     break
-                elif container_id == current_containers_on_ship[
-                    i].id and self.check_compatibility_of_ship_and_container(i):
+                elif container_id == current_containers_on_ship[i].id and self.check_compatibility_of_ship_and_container(i):
                     container = current_containers_on_ship[i]
                     current_containers_on_ship.append(container)
                     current_port.delete_container(container.id)
                     print(f"Container {container.id} has been successfully loaded.")
                     self._used_containers.append(container.id)
-                    if i > 0 and container.id == self._used_containers[-2]:
+                    if i > 0 and len(self._used_containers) >= 2 and container.id == self._used_containers[-2]:
                         break
 
     def unload(self, container_id: UUID) -> None:
