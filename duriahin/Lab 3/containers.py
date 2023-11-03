@@ -23,11 +23,14 @@ class Container(ABC):
             return id_check and weight_check and type_check
         return False
 
-    def load_item(self, item_type, ID, weight, count, specific_attribute):
+    def load_item(self, item_type, ID, weight, count, containerID, specific_attribute):
         factory = ItemFactory()
-        item = factory.create_item(item_type, ID, weight, count, specific_attribute)
-        self.items.append(item)
-        print(f"Loading {item_type} item with ID {ID} into Container {self.id}...")
+        item = factory.create_item(item_type, ID, weight, count, containerID, specific_attribute)
+        if item:
+            self.items.append(item)
+            print(f"Loading {item_type} item with ID {ID} into Container {self.id}...")
+        else:
+            print(f"Invalid item type: {item_type}")
 
     def unload_item(self, item_id):
         item_to_remove = next((item for item in self.items if item.ID == item_id), None)
