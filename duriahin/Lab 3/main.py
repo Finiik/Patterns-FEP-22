@@ -1,17 +1,19 @@
 import json
-import random
 from uuid import uuid4
 from containers import BasicContainer, HeavyContainer, RefrigeratedContainer, LiquidContainer
 from port import Port
 from ship import Ship, ConfigShip
 
 containers = [
-    BasicContainer(weight=250, id=uuid4()),
-    BasicContainer(weight=450, id=uuid4()),
-    HeavyContainer(weight=350, id=uuid4()),
-    RefrigeratedContainer(weight=250.5, id=uuid4()),
-    LiquidContainer(weight=124, id=uuid4())
+    BasicContainer(weight=250, id="3"),
+    BasicContainer(weight=450, id="5"),
+    HeavyContainer(weight=350, id="7"),
+    RefrigeratedContainer(weight=250.5, id="10"),
+    LiquidContainer(weight=124, id="14")
 ]
+
+
+# решта коду
 
 def load_data_from_json(file_path):
     with open(file_path, "r") as infile:
@@ -29,12 +31,12 @@ def load_items_onto_ship(ship, containers, item_data):
             item_data["ID"],
             item_data["weight"],
             item_data["count"],
+            item_data["containerID"],
             item_data["specific_attribute"]
         )
         print(f"Item successfully loaded into container {loaded_container.id}.")
     else:
         print(f"Container with ID {container_id_} not found.")
-
 
 if __name__ == "__main__":
     ships_filler = load_data_from_json("input.json")
@@ -66,12 +68,12 @@ if __name__ == "__main__":
         )
         ships_objects.append(ship)
 
-        # Loading items onto the ship
-        for item_data in ship_data["items"]:
-            load_items_onto_ship(ship, containers, item_data)
-
         # Load specific containers onto ships
         for j in range(i, len(containers), len(ships_filler)):
             ship.load(containers[j].id)
             ship.unload(containers[j].id)
             ship.sail_to(ports_objects[i])
+
+        # Loading items onto the ship
+        for item_data in ship_data["items"]:
+            load_items_onto_ship(ship, containers, item_data)
