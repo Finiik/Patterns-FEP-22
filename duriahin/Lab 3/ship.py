@@ -115,11 +115,10 @@ class Ship(IShip):
         print(f"{amount_of_fuel_to_add} liters has been added to previous amount of fuel: {self.fuel}.")
         self.fuel += amount_of_fuel_to_add
 
-    def check_compatibility_of_ship_and_container(self, i: int) -> bool:
-        if self._containers_on_ship[i].weight <= self.configs.total_weight_capacity:
+    def check_compatibility_of_ship_and_container(self, i):
+        if int(self._containers_on_ship[i].weight) <= self.configs.total_weight_capacity:
             return True
-        else:
-            return False
+        return False
 
     def delete_container_on_ship(self, container_id: uuid4) -> None:
         containers = [container for container in self._containers_on_ship if container.id != container_id]
@@ -132,23 +131,25 @@ class Ship(IShip):
             for current_port in self.port:
                 if isinstance(current_containers_on_ship[i], str):
                     break
-                elif container_id == current_containers_on_ship[i].id and self.check_compatibility_of_ship_and_container(i):
+                elif container_id == current_containers_on_ship[
+                    i].id and self.check_compatibility_of_ship_and_container(i):
                     container = current_containers_on_ship[i]
-                    current_containers_on_ship.append(container)
-                    current_port.delete_container(container.id)
-                    print(f"Container {container.id} has been successfully loaded.")
-                    self._used_containers.append(container.id)
-                    if i > 0 and len(self._used_containers) >= 2 and container.id == self._used_containers[-2]:
-                        break
+                    if container not in self.containers_on_ship:  # Перевірка наявності контейнера на кораблі
+                        self.containers_on_ship.append(container)
+                        current_port.delete_container(container.id)
+                        print(f"Container {container.id} has been successfully loaded.")
+                        self._used_containers.append(container.id)
+                        if i > 0 and len(self._used_containers) >= 2 and container.id == self._used_containers[-2]:
+                            break
 
     def unload(self, container_id: UUID) -> None:
         container_found = False
-        for i, ship_container in enumerate(self._containers_on_ship):
+        for i, ship_container in enumerate(self.containers_on_ship):
             for current_port in self.port:
-                if type(ship_container) == str:
+                if isinstance(ship_container, str):
                     break
                 elif container_id == ship_container.id and container_id not in self._unloaded_containers_id:
-                    self._containers_on_ship.pop(i)
+                    self.containers_on_ship.pop(i)
                     current_port.current_containers_in_port.append(ship_container)
                     self._unloaded_containers_id.append(container_id)
                     print(f"Container {container_id} has been successfully unloaded.")
