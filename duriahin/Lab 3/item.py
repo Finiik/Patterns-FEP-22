@@ -39,7 +39,8 @@ class Liquid(Item):
 
 class ItemFactory:
     @staticmethod
-    def create_item(item_type: str, ID: int, weight: float, count: int, containerID: int, specific_attribute: float) -> Union[Small, Heavy, Refrigerated, Liquid]:
+    def create_item(item_type: str, ID: int, weight: float, count: int, containerID: int, specific_attribute: float) -> \
+    Union[Small, Heavy, Refrigerated, Liquid]:
         if item_type == 'Small':
             return Small(ID, weight, count, containerID, specific_attribute)
         elif item_type == 'Heavy':
@@ -49,4 +50,4 @@ class ItemFactory:
         elif item_type == 'Liquid':
             return Liquid(ID, weight, count, containerID, specific_attribute)
         else:
-            raise ValueError(f"Invalid item type: {item_type}")
+            return None
