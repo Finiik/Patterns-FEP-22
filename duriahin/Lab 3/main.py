@@ -1,13 +1,15 @@
 import json
 from uuid import uuid4
-from containers import BasicContainer, HeavyContainer, RefrigeratedContainer, LiquidContainer
 from port import Port
 from ship import Ship, ConfigShip
+from containers import BasicContainer, HeavyContainer, RefrigeratedContainer, LiquidContainer
+
 
 def load_data_from_json(file_path):
     with open(file_path, "r") as infile:
         data = json.load(infile)
     return data
+
 
 def load_containers_from_data(data):
     if "container" not in data:
@@ -19,7 +21,8 @@ def load_containers_from_data(data):
         containers.append(container_type(weight=container_data["weight"], id=str(container_data["ID"])))
     return containers
 
-def load_items_onto_ship(ship, containers, item_data):
+
+def load_items_onto_ship(ship, containers, item_data, ports_objects):
     container_id_ = item_data["containerID"]
     loaded_container = next((c for c in containers if str(c.id) == container_id_), None)
     if loaded_container:
@@ -43,23 +46,26 @@ def load_items_onto_ship(ship, containers, item_data):
         for c in containers:
             print(f"Container {c.id}")
 
+
 if __name__ == "__main__":
     ships_filler = load_data_from_json("input.json")
 
     print('\n')
 
     # Creating ports
-    ports_objects = []
+    ports_objects = []  # Оголошення порожнього списку
     for port_data in ships_filler:
         port_id = str(uuid4())
         port_latitude = port_data["latitude"]
         port_longitude = port_data["longitude"]
         port_containers = load_containers_from_data(port_data)
+        if any(container.items for container in port_containers):  # Перевірка наявності items у контейнерах
+            print(f"Port {port_id}: {port_containers}")
         ports_objects.append(Port(port_id, port_latitude, port_longitude, port_containers))
 
     ships_objects = []
     for i, ship_data in enumerate(ships_filler):
-        containers = load_containers_from_data(ship_data)  # Add this line
+        containers = load_containers_from_data(ship_data)
         ship = Ship(
             ship_data["ship_id"],
             ports_objects,
@@ -71,11 +77,16 @@ if __name__ == "__main__":
                 ship_data["maxNumberOfLiquidContainers"],
                 ship_data["fuelConsumptionPerKM"]
             ),
-            containers,  # Use the local variable
+            containers,
             ship_data["fuel"]
         )
         ships_objects.append(ship)
 
         # Loading items onto the ship
         for item_data in ship_data["items"]:
-            load_items_onto_ship(ship, containers, item_data)
+            load_items_onto_ship(ship, containers, item_data, ports_objects)
+
+    # Після завантаження даних у порт
+    for port in ports_objects:
+        port.display_containers()
+        print('\n')
