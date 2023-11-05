@@ -16,16 +16,18 @@ def load_containers_from_data(data):
         return []
 
     containers = []
+    print("ALL informathion about the container in port:\n")
     for container_data in data["container"]:
         container_type = globals()[container_data["type"]]
         containers.append(container_type(weight=container_data["weight"], id=str(container_data["ID"])))
     return containers
 
-
+print('\n')
 def load_items_onto_ship(ship, containers, item_data, ports_objects):
     container_id_ = item_data["containerID"]
     loaded_container = next((c for c in containers if str(c.id) == container_id_), None)
     if loaded_container:
+        print('\n')
         print(f"Loading item into container {loaded_container.id}")
         loaded_container.load_item(
             item_data["item_type"],
@@ -39,12 +41,14 @@ def load_items_onto_ship(ship, containers, item_data, ports_objects):
         ship.load(loaded_container.id)
         ship.sail_to(ports_objects[i])
         ship.unload(loaded_container.id)
-        print('\n')
+        # Отримання ID порту для контейнера
+        port_id = next((port.id for port in ports_objects if loaded_container in port.current_containers), None)
     else:
         print(f"Container with ID {container_id_} not found.")
         print("Available containers:")
         for c in containers:
             print(f"Container {c.id}")
+
 
 
 if __name__ == "__main__":
@@ -53,14 +57,13 @@ if __name__ == "__main__":
     print('\n')
 
     # Creating ports
-    ports_objects = []  # Оголошення порожнього списку
+    ports_objects = []
     for port_data in ships_filler:
         port_id = str(uuid4())
         port_latitude = port_data["latitude"]
         port_longitude = port_data["longitude"]
         port_containers = load_containers_from_data(port_data)
-        if any(container.items for container in port_containers):  # Перевірка наявності items у контейнерах
-            print(f"Port {port_id}: {port_containers}")
+        print(f"Port {port_id}: {port_containers}")  # Друк кількості контейнерів у порту
         ports_objects.append(Port(port_id, port_latitude, port_longitude, port_containers))
 
     ships_objects = []
@@ -85,8 +88,3 @@ if __name__ == "__main__":
         # Loading items onto the ship
         for item_data in ship_data["items"]:
             load_items_onto_ship(ship, containers, item_data, ports_objects)
-
-    # Після завантаження даних у порт
-    for port in ports_objects:
-        port.display_containers()
-        print('\n')
