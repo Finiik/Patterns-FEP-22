@@ -11,6 +11,13 @@
         "maxNumberOfLiquidContainers": 5,
         "fuelConsumptionPerKM": 20,
         "ship_type": "LightWeightShip",
+        "container" : [
+            {
+                "type": "BasicContainer",
+                "weight": 250,
+                "ID": 3
+            }
+        ],
         "items": [
             {
                 "item_type": "Small",
@@ -35,6 +42,13 @@
         "maxNumberOfLiquidContainers": 5,
         "fuelConsumptionPerKM": 20,
         "ship_type": "HeavyShip",
+        "container" : [
+            {
+                "type": "BasicContainer",
+                "weight": 450,
+                "ID": 5
+            }
+        ],
         "items": [
             {
                 "item_type": "Heavy",
@@ -59,6 +73,13 @@
         "maxNumberOfLiquidContainers": 6,
         "fuelConsumptionPerKM": 22,
         "ship_type": "MediumShip",
+        "container" : [
+            {
+                "type": "HeavyContainer",
+                "weight": 350,
+                "ID": 7
+            }
+        ],
         "items": [
             {
                 "item_type": "Refrigerated",
@@ -83,6 +104,13 @@
         "maxNumberOfLiquidContainers": 8,
         "fuelConsumptionPerKM": 25,
         "ship_type": "HeavyShip",
+        "container" : [
+            {
+                "type": "RefrigeratedContainer",
+                "weight": 252.5,
+                "ID": 3
+            }
+        ],
         "items": [
             {
                 "item_type": "Liquid",
@@ -107,6 +135,13 @@
         "maxNumberOfLiquidContainers": 6,
         "fuelConsumptionPerKM": 22,
         "ship_type": "MediumShip",
+       "container" : [
+            {
+                "type": "LiquidContainer",
+                "weight": 124,
+                "ID": 14
+            }
+        ],
         "items": [
             {
                 "item_type": "Refrigerated",
@@ -131,6 +166,13 @@
         "maxNumberOfLiquidContainers": 8,
         "fuelConsumptionPerKM": 25,
         "ship_type": "HeavyShip",
+        "container" : [
+            {
+                "type": "LiquidContainer",
+                "weight": 120,
+                "ID": 17
+            }
+        ],
         "items": [
             {
                 "item_type": "Liquid",
