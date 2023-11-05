@@ -127,20 +127,22 @@ class Ship(IShip):
     def load(self, container_id: UUID) -> None:
         print("Loading container...")
         current_containers_on_ship = self.containers_on_ship
-        for i in range(len(current_containers_on_ship)):
+        container_found = False
+        for i, ship_container in enumerate(self.containers_on_ship):
             for current_port in self.port:
-                if isinstance(current_containers_on_ship[i], str):
+                if isinstance(ship_container, str):
                     break
-                elif container_id == current_containers_on_ship[
-                    i].id and self.check_compatibility_of_ship_and_container(i):
-                    container = current_containers_on_ship[i]
-                    if container not in self.containers_on_ship:  # Перевірка наявності контейнера на кораблі
-                        self.containers_on_ship.append(container)
-                        current_port.delete_container(container.id)
-                        print(f"Container {container.id} has been successfully loaded.")
-                        self._used_containers.append(container.id)
-                        if i > 0 and len(self._used_containers) >= 2 and container.id == self._used_containers[-2]:
-                            break
+                elif container_id == ship_container.id and self.check_compatibility_of_ship_and_container(
+                        i) and container_id not in self._used_containers:
+                    container = ship_container
+                    self.containers_on_ship.append(container)  # Додати контейнер на корабель
+                    current_port.delete_container(container.id)  # Видалити контейнер з порту
+                    print(f"Container {container_id} has been successfully loaded.")
+                    self._used_containers.append(container_id)
+                    container_found = True
+                    break
+        if not container_found:
+            print(f"Container with ID {container_id} not found.")
 
     def unload(self, container_id: UUID) -> None:
         container_found = False
