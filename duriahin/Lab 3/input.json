@@ -134,7 +134,7 @@
             {
                 "type": "RefrigeratedContainer",
                 "weight": 252.5,
-                "ID": 3
+                "ID": 10
             }
         ],
         "items": [
@@ -197,6 +197,16 @@
                 "type": "LiquidContainer",
                 "weight": 120,
                 "ID": 17
+            },
+            {
+                "type": "BasicContainer",
+                "weight": 270,
+                "ID": 25
+            },
+             {
+                "type": "HeavyContainer",
+                "weight": 400,
+                "ID": 30
             }
         ],
         "items": [
@@ -206,6 +216,22 @@
                 "weight": 250,
                 "count": 3,
                 "containerID": "17",
+                "specific_attribute": 35
+            },
+            {
+                "item_type": "Liquid",
+                "ID": "24",
+                "weight": 250,
+                "count": 4,
+                "containerID": "25",
+                "specific_attribute": 35
+            },
+            {
+                "item_type": "Liquid",
+                "ID": "29",
+                "weight": 250,
+                "count": 1,
+                "containerID": "30",
                 "specific_attribute": 35
             }
         ],
