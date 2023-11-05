@@ -8,6 +8,7 @@ def load_data_from_json(file_path):
     with open(file_path, "r") as infile:
         data = json.load(infile)
     return data
+
 def load_containers_from_data(data):
     if "container" not in data:
         return []
@@ -15,8 +16,9 @@ def load_containers_from_data(data):
     containers = []
     for container_data in data["container"]:
         container_type = globals()[container_data["type"]]
-        containers.append(container_type(weight=container_data["weight"], id=container_data["ID"]))
+        containers.append(container_type(weight=container_data["weight"], id=str(container_data["ID"])))
     return containers
+
 def load_items_onto_ship(ship, containers, item_data):
     container_id_ = item_data["containerID"]
     loaded_container = next((c for c in containers if str(c.id) == container_id_), None)
@@ -37,7 +39,9 @@ def load_items_onto_ship(ship, containers, item_data):
         print('\n')
     else:
         print(f"Container with ID {container_id_} not found.")
-
+        print("Available containers:")
+        for c in containers:
+            print(f"Container {c.id}")
 
 if __name__ == "__main__":
     ships_filler = load_data_from_json("input.json")
