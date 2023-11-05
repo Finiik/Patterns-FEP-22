@@ -4,6 +4,8 @@ from uuid import UUID
 from ship import Ship
 from containers import Container
 from typing import List
+from containers import BasicContainer, HeavyContainer, RefrigeratedContainer, LiquidContainer
+
 
 import haversine as hs
 
@@ -21,7 +23,13 @@ class IPort(ABC):
 
 class Port(IPort):
 
-    def __init__(self, port_id: UUID, latitude: float, longitude: float,
+    def _clear_excess_containers(self):
+        allowed_container_types = {'BasicContainer', 'HeavyContainer', 'RefrigeratedContainer', 'LiquidContainer'}
+        self._current_containers_in_port = [container for container in self._current_containers_in_port
+                                            if isinstance(container, (
+            BasicContainer, HeavyContainer, RefrigeratedContainer, LiquidContainer))]
+
+    def __init__(self, port_id: str, latitude: float, longitude: float,
                  current_containers_in_port: List[Container] = ()) -> None:
         self.id = port_id
         self.latitude = latitude
@@ -29,6 +37,7 @@ class Port(IPort):
         self._current_containers_in_port = current_containers_in_port
         self.ship_history = []
         self.current_ships = []
+        self._clear_excess_containers()
 
     def __str__(self) -> str:
         return (f"ID: {self.id}\nLatitude: {self.latitude}\nLongitude: {self.longitude}\n"
@@ -37,10 +46,6 @@ class Port(IPort):
     @property
     def current_containers(self) -> List[Container]:
         return self._current_containers_in_port
-
-    @current_containers.setter
-    def current_containers(self, value: List[Container]):
-        self._current_containers_in_port = value
 
     def delete_container(self, container_id: UUID) -> str:
         if not self.current_containers:
@@ -51,6 +56,11 @@ class Port(IPort):
             return f"Container {container_id} has been successfully removed from port {self.id}"
         else:
             return f"Container with ID {container_id} not found in Port {self.id}."
+
+    def display_containers(self):
+        containers_with_items = [container for container in self.current_containers if container.items]
+        for container in containers_with_items:
+            print(f"Container {container.id}: {container.items}")
 
     def get_distance(self, other_port: Port) -> float:
         dist = hs.haversine((self.latitude, self.longitude), (other_port.latitude, other_port.longitude))
