@@ -56,12 +56,7 @@ class Port(IPort):
             return f"Container {container_id} has been successfully removed from port {self.id}"
         else:
             return f"Container with ID {container_id} not found in Port {self.id}."
-
-    def display_containers(self):
-        containers_with_items = [container for container in self.current_containers if container.items]
-        for container in containers_with_items:
-            print(f"Container {container.id}: {container.items}")
-
+        
     def get_distance(self, other_port: Port) -> float:
         dist = hs.haversine((self.latitude, self.longitude), (other_port.latitude, other_port.longitude))
         return dist
