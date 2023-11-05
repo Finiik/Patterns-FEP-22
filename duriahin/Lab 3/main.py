@@ -4,23 +4,19 @@ from containers import BasicContainer, HeavyContainer, RefrigeratedContainer, Li
 from port import Port
 from ship import Ship, ConfigShip
 
-containers = [
-    BasicContainer(weight=250, id="3"),
-    BasicContainer(weight=450, id="5"),
-    HeavyContainer(weight=350, id="7"),
-    RefrigeratedContainer(weight=250.5, id="10"),
-    LiquidContainer(weight=124, id="14")
-]
-
-
-# решта коду
-
 def load_data_from_json(file_path):
     with open(file_path, "r") as infile:
         data = json.load(infile)
     return data
+def load_containers_from_data(data):
+    if "container" not in data:
+        return []
 
-
+    containers = []
+    for container_data in data["container"]:
+        container_type = globals()[container_data["type"]]
+        containers.append(container_type(weight=container_data["weight"], id=container_data["ID"]))
+    return containers
 def load_items_onto_ship(ship, containers, item_data):
     container_id_ = item_data["containerID"]
     loaded_container = next((c for c in containers if str(c.id) == container_id_), None)
@@ -35,11 +31,18 @@ def load_items_onto_ship(ship, containers, item_data):
             item_data["specific_attribute"]
         )
         print(f"Item successfully loaded into container {loaded_container.id}.")
+        ship.load(loaded_container.id)
+        ship.sail_to(ports_objects[i])
+        ship.unload(loaded_container.id)
+        print('\n')
     else:
         print(f"Container with ID {container_id_} not found.")
 
+
 if __name__ == "__main__":
     ships_filler = load_data_from_json("input.json")
+
+    print('\n')
 
     # Creating ports
     ports_objects = []
@@ -47,11 +50,12 @@ if __name__ == "__main__":
         port_id = str(uuid4())
         port_latitude = port_data["latitude"]
         port_longitude = port_data["longitude"]
-        port_containers = containers
+        port_containers = load_containers_from_data(port_data)
         ports_objects.append(Port(port_id, port_latitude, port_longitude, port_containers))
 
     ships_objects = []
     for i, ship_data in enumerate(ships_filler):
+        containers = load_containers_from_data(ship_data)  # Add this line
         ship = Ship(
             ship_data["ship_id"],
             ports_objects,
@@ -63,16 +67,10 @@ if __name__ == "__main__":
                 ship_data["maxNumberOfLiquidContainers"],
                 ship_data["fuelConsumptionPerKM"]
             ),
-            containers,
+            containers,  # Use the local variable
             ship_data["fuel"]
         )
         ships_objects.append(ship)
-
-        # Load specific containers onto ships
-        for j in range(i, len(containers), len(ships_filler)):
-            ship.load(containers[j].id)
-            ship.unload(containers[j].id)
-            ship.sail_to(ports_objects[i])
 
         # Loading items onto the ship
         for item_data in ship_data["items"]:
