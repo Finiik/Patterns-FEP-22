@@ -16,16 +16,42 @@
                 "type": "BasicContainer",
                 "weight": 250,
                 "ID": 3
+            },
+            {
+                "type": "BasicContainer",
+                "weight": 270,
+                "ID": 4
+            },
+             {
+                "type": "HeavyContainer",
+                "weight": 400,
+                "ID": 2
             }
         ],
         "items": [
             {
                 "item_type": "Small",
                 "ID": "2",
-                "weight": 300,
+                "weight": 50,
                 "count": 3,
                 "containerID": "3",
                 "specific_attribute": 25
+            },
+            {
+                "item_type": "Small",
+                "ID": "1",
+                "weight": 45,
+                "count": 3,
+                "containerID": "4",
+                "specific_attribute": 1
+            },
+            {
+                "item_type": "Heavy",
+                "ID": "2",
+                "weight": 200,
+                "count": 1,
+                "containerID": "2",
+                "specific_attribute": 2
             }
         ],
         "ports_deliver": "2"
