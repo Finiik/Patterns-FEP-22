@@ -103,15 +103,12 @@ class Ship:
         self.max_weight = max_weight
         self.max_num_cont
 def load_container(self, container):
-        # Додати логіку для перевірки, чи може контейнер бути завантажений на корабель
+       
         pass
-
     
-
-def unload_container(self, container):
-        # Додати логіку для розвантаження контейнера з корабля
+def unload_container(self, container): 
+    
         pass
-
     def travel(self, destination_port):
-        # Додати логіку для подорожі до іншого порту
+        
         pass
