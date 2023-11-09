@@ -6,10 +6,17 @@ class Container:
 class BasicContainer(Container):
     def __init__(self, weight):
         super().__init__(weight)
-        self.ID = None
+        self.ID = 
+        self.ID
+None
 
 class HeavyContainer(Container):
     def __init__(self, weight, special_type):
         super().__init__(weight)
         self.special_type = special_type
-        self.ID = None
+        self.ID = 
+        self.special_type = special_type
+        self
+
+        self.special_type = special
+None
