@@ -1,0 +1,390 @@
+{
+  "Containers_data": [
+    {
+      "id": "0a5197ef-e6b2-4cbc-8c97-3d9d88798baa",
+      "weight": 1000,
+      "type": null
+    },
+    {
+      "id": "b05c964e-b1fa-4eb1-8670-55707834c49c",
+      "weight": 2000,
+      "type": null
+    },
+    {
+      "id": "c3eeff27-1125-476b-8dc8-45a06cfdb5ff",
+      "weight": 3000,
+      "type": null
+    },
+    {
+      "id": "d1a2cec9-a019-4436-8503-64ed14daf7b0",
+      "weight": 4000,
+      "type": "R"
+    },
+    {
+      "id": "72c48a86-7bcd-45ae-b743-cd9d23b7e0bc",
+      "weight": 3500,
+      "type": "R"
+    },
+    {
+      "id": "0396b78b-76ba-44b3-b3c7-44931b169b9b",
+      "weight": 4800,
+      "type": null
+    },
+    {
+      "id": "d56dbbdb-dcd5-4fef-8c1b-9aa65d6c7057",
+      "weight": 3300,
+      "type": "L"
+    },
+    {
+      "id": "aa29fb2f-ae94-4580-9bef-bf02ec7b609b",
+      "weight": 4040,
+      "type": null
+    },
+    {
+      "id": "10d24298-5454-4718-b138-ea1ee288529a",
+      "weight": 1800,
+      "type": null
+    },
+    {
+      "id": "cee5da3b-5fad-4c1a-846e-617f7380d59b",
+      "weight": 2080,
+      "type": null
+    },
+    {
+      "id": "3b136a9c-64af-46c2-8d17-a7eecf1d5553",
+      "weight": 3940,
+      "type": "R"
+    },
+    {
+      "id": "0d4ef9fb-8a7e-4980-b38b-bc24cacdc48b",
+      "weight": 4070,
+      "type": "L"
+    },
+    {
+      "id": "2261a604-7d38-428b-ba3e-6b75be7d22cf",
+      "weight": 1700,
+      "type": null
+    },
+    {
+      "id": "f98d057c-f0b9-4431-bce0-69e9ed71b0c6",
+      "weight": 5200,
+      "type": null
+    },
+    {
+      "id": "dff019e9-ef88-4568-b4ab-f9ac216bcc52",
+      "weight": 6400,
+      "type": "R"
+    },
+    {
+      "id": "ad5f6ac5-a7b8-4b2d-ada9-ba0bd5885574",
+      "weight": 3300,
+      "type": null
+    },
+    {
+      "id": "3abc033c-aa84-4328-9e44-b54337ecac95",
+      "weight": 6110,
+      "type": "L"
+    },
+    {
+      "id": "4dd26f37-e127-46c6-80ba-8523229feda4",
+      "weight": 3550,
+      "type": null
+    }
+  ],
+  "Ships_data": [
+    {
+      "fuel": 1700,
+      "total_weight_capacity": 18500,
+      "maxNumberOfAllContainers": 4,
+      "maxNumberOfBasicContainers": 1,
+      "maxNumberOfHeavyContainers": 1,
+      "maxNumberOfRefrigeratedContainers": 1,
+      "maxNumberOfLiquidContainers": 1,
+      "fuelConsumptionPerKM": 8
+    },
+    {
+      "fuel": 2000,
+      "total_weight_capacity": 34000,
+      "maxNumberOfAllContainers": 8,
+      "maxNumberOfBasicContainers": 2,
+      "maxNumberOfHeavyContainers": 2,
+      "maxNumberOfRefrigeratedContainers": 2,
+      "maxNumberOfLiquidContainers": 2,
+      "fuelConsumptionPerKM": 16
+    },
+    {
+      "fuel": 2300,
+      "total_weight_capacity": 55000,
+      "maxNumberOfAllContainers": 12,
+      "maxNumberOfBasicContainers": 3,
+      "maxNumberOfHeavyContainers": 3,
+      "maxNumberOfRefrigeratedContainers": 3,
+      "maxNumberOfLiquidContainers": 3,
+      "fuelConsumptionPerKM": 24
+    },
+    {
+      "fuel": 1700,
+      "total_weight_capacity": 15000,
+      "maxNumberOfAllContainers": 4,
+      "maxNumberOfBasicContainers": 1,
+      "maxNumberOfHeavyContainers": 1,
+      "maxNumberOfRefrigeratedContainers": 1,
+      "maxNumberOfLiquidContainers": 1,
+      "fuelConsumptionPerKM": 8
+    },
+    {
+      "fuel": 2000,
+      "total_weight_capacity": 39000,
+      "maxNumberOfAllContainers": 8,
+      "maxNumberOfBasicContainers": 2,
+      "maxNumberOfHeavyContainers": 2,
+      "maxNumberOfRefrigeratedContainers": 2,
+      "maxNumberOfLiquidContainers": 2,
+      "fuelConsumptionPerKM": 16
+    }
+  ],
+  "Ports_data": [
+    {
+      "latitude": 31.18,
+      "longitude": 121.47,
+      "basic_cont": 2,
+      "heavy_cont": 2,
+      "refrigerated_cont": 1,
+      "liquid_cont": 1
+    },
+    {
+      "latitude": 29.86,
+      "longitude": 121.55,
+      "basic_cont": 2,
+      "heavy_cont": 2,
+      "refrigerated_cont": 1,
+      "liquid_cont": 1
+    },
+    {
+      "latitude": 30.61,
+      "longitude": 121.11,
+      "basic_cont": 2,
+      "heavy_cont": 1,
+      "refrigerated_cont": 2,
+      "liquid_cont": 1
+    }
+  ],
+  "Items_data": [
+    {
+      "id": "c170c326-77ed-41fa-ad12-2d381455274c",
+      "weight": 440,
+      "count": 4,
+      "type": "R"
+    },
+    {
+      "id": "3cf5ec12-c8e2-43b5-90dd-7c047006ea30",
+      "weight": 420,
+      "count": 2,
+      "type": null
+    },
+    {
+      "id": "3ae04948-3f2e-4ded-8582-5059a14d8d06",
+      "weight": 520,
+      "count": 3,
+      "type": "L"
+    },
+    {
+      "id": "983a5cb3-0417-4a0a-a613-737820b44900",
+      "weight": 600,
+      "count": 1,
+      "type": null
+    },
+    {
+      "id": "926e2f9e-7203-481b-81a7-f954b2eece82",
+      "weight": 200,
+      "count": 3,
+      "type": "L"
+    },
+    {
+      "id": "e669ea6d-f74f-457c-bec2-a6f6d6189fb5",
+      "weight": 160,
+      "count": 4,
+      "type": "R"
+    },
+    {
+      "id": "1e1ce9f5-ad21-473d-b91b-8d00a329332c",
+      "weight": 360,
+      "count": 2,
+      "type": null
+    },
+    {
+      "id": "78ccf3c7-944e-4275-afc0-1d246845b50f",
+      "weight": 440,
+      "count": 5,
+      "type": null
+    },
+    {
+      "id": "544574fd-6b47-498d-bf96-f5d358e67b6d",
+      "weight": 20,
+      "count": 2,
+      "type": "R"
+    },
+    {
+      "id": "2822d6eb-443e-4703-b77d-8af1e8729bf4",
+      "weight": 80,
+      "count": 6,
+      "type": null
+    },
+    {
+      "id": "aae7eefd-f8a3-4383-ae61-a7ac9ec4e28b",
+      "weight": 360,
+      "count": 5,
+      "type": null
+    },
+    {
+      "id": "2c9c7353-aff4-46c5-ae21-3998f5ef0357",
+      "weight": 400,
+      "count": 3,
+      "type": "L"
+    },
+    {
+      "id": "8b3816e2-7218-4489-8f6b-b85138c9f334",
+      "weight": 140,
+      "count": 2,
+      "type": "R"
+    },
+    {
+      "id": "c4b8fef5-37cc-4c44-88d3-cc0b3959d4ff",
+      "weight": 180,
+      "count": 2,
+      "type": "R"
+    },
+    {
+      "id": "2cb34f0f-8fa2-4a98-9234-824ab8971d27",
+      "weight": 220,
+      "count": 6,
+      "type": "L"
+    },
+    {
+      "id": "df986179-474f-4c6c-bea4-35eb7ba20708",
+      "weight": 80,
+      "count": 5,
+      "type": null
+    },
+    {
+      "id": "49a00748-574c-4257-9167-c55b3437771e",
+      "weight": 280,
+      "count": 3,
+      "type": null
+    },
+    {
+      "id": "e15a0e78-cbb4-4122-9ddb-4c96b1cdcaed",
+      "weight": 260,
+      "count": 1,
+      "type": null
+    },
+    {
+      "id": "37b7a20e-b13a-4bd8-ac11-ee263772b9ff",
+      "weight": 240,
+      "count": 5,
+      "type": "L"
+    },
+    {
+      "id": "dbba01d8-9791-4942-b59f-44d99cccd4b1",
+      "weight": 220,
+      "count": 5,
+      "type": null
+    },
+    {
+      "id": "462f92ba-bcf7-49c5-b88b-f6b26ceaa6cb",
+      "weight": 440,
+      "count": 2,
+      "type": null
+    },
+    {
+      "id": "10d083ad-8d39-407c-ae2b-1190e84e29e3",
+      "weight": 500,
+      "count": 2,
+      "type": "L"
+    },
+    {
+      "id": "00827ebe-52bc-4b24-9564-0393a236f728",
+      "weight": 120,
+      "count": 3,
+      "type": "R"
+    },
+    {
+      "id": "706f6a3d-00de-4ce9-a2c7-5f90159455df",
+      "weight": 600,
+      "count": 3,
+      "type": "L"
+    },
+    {
+      "id": "6ba33d27-c6ec-4196-a8b1-65e6297943be",
+      "weight": 520,
+      "count": 6,
+      "type": "L"
+    },
+    {
+      "id": "39b47557-8be4-467f-a67b-3f980d14f209",
+      "weight": 180,
+      "count": 2,
+      "type": null
+    },
+    {
+      "id": "7d53af1c-522a-47ea-86ea-603c55ddcf3d",
+      "weight": 20,
+      "count": 6,
+      "type": "L"
+    },
+    {
+      "id": "74b2e2c5-c90c-4690-939f-3824135dd558",
+      "weight": 20,
+      "count": 1,
+      "type": null
+    },
+    {
+      "id": "b043b6a1-a693-40a1-ac09-5928111c59d2",
+      "weight": 120,
+      "count": 1,
+      "type": null
+    },
+    {
+      "id": "e29be8bd-431f-4dd0-9874-0c4af2107fd9",
+      "weight": 180,
+      "count": 5,
+      "type": null
+    },
+    {
+      "id": "b9c53e22-69c2-4a92-b4ea-994f78d1b654",
+      "weight": 520,
+      "count": 3,
+      "type": null
+    },
+    {
+      "id": "6ee4b59a-a580-4756-9eac-1c806b5356a7",
+      "weight": 440,
+      "count": 6,
+      "type": "R"
+    },
+    {
+      "id": "66aa0f7e-81bc-4745-9b1f-a79c987dbe42",
+      "weight": 600,
+      "count": 4,
+      "type": null
+    },
+    {
+      "id": "722a2867-7363-46d4-b194-503130b4c4bd",
+      "weight": 300,
+      "count": 3,
+      "type": "L"
+    },
+    {
+      "id": "c98c62bd-ee3e-4eec-92bd-8fa664d35a98",
+      "weight": 420,
+      "count": 4,
+      "type": null
+    },
+    {
+      "id": "85a72136-977d-4e8f-a7ec-8500814bf66d",
+      "weight": 320,
+      "count": 3,
+      "type": "R"
+    }
+  ]
+}
