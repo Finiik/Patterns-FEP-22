@@ -1,0 +1,25 @@
+{
+"customers":
+        [
+            {"id": 0,
+              "name": "John Doe",
+              "age": 30,
+              "operator_id": 0,
+              "bill": 200
+            },
+
+          {"id": 1,
+            "name": "Jane Smith",
+            "age": 25,
+            "operator_id": 1,
+            "bill": 400
+            },
+
+          {"id": 2,
+            "name": "Deez Nuts",
+            "age": 13,
+            "operator_id": 2,
+            "bill": 600
+            }
+        ]
+}

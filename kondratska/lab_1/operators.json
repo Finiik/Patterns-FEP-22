@@ -1,0 +1,28 @@
+{
+"operators":
+        [
+            {
+              "id": 0,
+              "talking_charge": 0.3,
+              "message_charge": 0.45,
+              "network_charge": 1.2,
+              "discount_rate": 0.04
+            },
+            {
+              "id": 1,
+              "talking_charge": 0.2,
+              "message_charge": 0.35,
+              "network_charge": 0.9,
+              "discount_rate": 0.05
+            },
+            {
+              "id": 2,
+              "talking_charge": 0.5,
+              "message_charge": 0.32,
+              "network_charge": 0.3,
+              "discount_rate": 0.02
+            }
+
+
+        ]
+}
