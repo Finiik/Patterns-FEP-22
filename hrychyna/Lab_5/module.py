@@ -7,7 +7,7 @@ def golden_credit_card(cls):
     class NewClass(cls):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
-            self.credit_limit *= 2  # Example enhancement for Golden Credit Card
+            self.credit_limit *= 2 
     return NewClass
 
 
@@ -15,7 +15,7 @@ def corporate_credit_card(cls):
     class NewClass(cls):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
-            self.credit_limit *= 1.5  # Example enhancement for Corporate Credit Card
+            self.credit_limit *= 1.5 
     return NewClass
 
 
@@ -39,7 +39,7 @@ def vip_customer(cls):
     class NewClass(cls):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
-            self.credit_limit *= 3  # Example enhancement for VIP Customer
+            self.credit_limit *= 3 
     return NewClass
 
 
