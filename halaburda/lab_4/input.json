@@ -1,0 +1,50 @@
+{
+  "Ports_data": [
+    {
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "basic_cont": 50,
+      "heavy_cont": 30,
+      "refrigerated_cont": 20,
+      "liquid_cont": 10
+    },
+    {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "basic_cont": 40,
+      "heavy_cont": 25,
+      "refrigerated_cont": 15,
+      "liquid_cont": 8
+    }
+  ],
+  "Ships_data": [
+    {
+      "total_weight_capacity": 25000,
+      "maxNumberOfAllContainers": 100,
+      "maxNumberOfBasicContainers": 30,
+      "maxNumberOfHeavyContainers": 30,
+      "maxNumberOfRefrigeratedContainers": 20,
+      "maxNumberOfLiquidContainers": 20,
+      "fuelConsumptionPerKM": 5,
+      "fuel": 200
+    },
+    {
+      "total_weight_capacity": 45000,
+      "maxNumberOfAllContainers": 150,
+      "maxNumberOfBasicContainers": 40,
+      "maxNumberOfHeavyContainers": 40,
+      "maxNumberOfRefrigeratedContainers": 30,
+      "maxNumberOfLiquidContainers": 30,
+      "fuelConsumptionPerKM": 8,
+      "fuel": 300
+    }
+  ],
+  "Containers_data": [
+    {"weight": 500},
+    {"weight": 700, "type": "Refrigerated"}
+  ],
+  "Items_data": [
+    {"weight": 20, "count": 100, "type": "Small"},
+    {"weight": 50, "count": 50, "type": "Large"}
+  ]
+}
