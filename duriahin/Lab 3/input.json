@@ -1,0 +1,240 @@
+[
+    {
+        "ship_id": "1",
+        "latitude": 46.4667,
+        "longitude": 30.7333,
+        "fuel": 1000,
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "LightWeightShip",
+        "container" : [
+            {
+                "type": "BasicContainer",
+                "weight": 250,
+                "ID": 3
+            },
+            {
+                "type": "BasicContainer",
+                "weight": 270,
+                "ID": 4
+            },
+             {
+                "type": "HeavyContainer",
+                "weight": 400,
+                "ID": 2
+            }
+        ],
+        "items": [
+            {
+                "item_type": "Small",
+                "ID": "2",
+                "weight": 50,
+                "count": 3,
+                "containerID": "3",
+                "specific_attribute": 25
+            },
+            {
+                "item_type": "Small",
+                "ID": "1",
+                "weight": 45,
+                "count": 3,
+                "containerID": "4",
+                "specific_attribute": 1
+            },
+            {
+                "item_type": "Heavy",
+                "ID": "2",
+                "weight": 200,
+                "count": 1,
+                "containerID": "2",
+                "specific_attribute": 2
+            }
+        ],
+        "ports_deliver": "2"
+    },
+    {
+        "ship_id": "2",
+        "latitude": 46.3159,
+        "longitude": 30.6503,
+        "fuel": 1000,
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "HeavyShip",
+        "container" : [
+            {
+                "type": "BasicContainer",
+                "weight": 450,
+                "ID": 5
+            }
+        ],
+        "items": [
+            {
+                "item_type": "Heavy",
+                "ID": "4",
+                "weight": 400,
+                "count": 2,
+                "containerID": "5",
+                "specific_attribute": 40
+            }
+        ],
+        "ports_deliver": "1"
+    },
+    {
+        "ship_id": "3",
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "fuel": 1000,
+        "totalWeightCapacity": 1200,
+        "maxNumberOfAllContainers": 25,
+        "maxNumberOfHeavyContainers": 6,
+        "maxNumberOfRefrigeratedContainers": 3,
+        "maxNumberOfLiquidContainers": 6,
+        "fuelConsumptionPerKM": 22,
+        "ship_type": "MediumShip",
+        "container" : [
+            {
+                "type": "HeavyContainer",
+                "weight": 350,
+                "ID": 7
+            }
+        ],
+        "items": [
+            {
+                "item_type": "Refrigerated",
+                "ID": "6",
+                "weight": 350,
+                "count": 4,
+                "containerID": "7",
+                "specific_attribute": 30
+            }
+        ],
+        "ports_deliver": "4"
+    },
+    {
+        "ship_id": "4",
+        "latitude": 51.5074,
+        "longitude": -0.1278,
+        "fuel": 1000,
+        "totalWeightCapacity": 1500,
+        "maxNumberOfAllContainers": 30,
+        "maxNumberOfHeavyContainers": 8,
+        "maxNumberOfRefrigeratedContainers": 4,
+        "maxNumberOfLiquidContainers": 8,
+        "fuelConsumptionPerKM": 25,
+        "ship_type": "HeavyShip",
+        "container" : [
+            {
+                "type": "RefrigeratedContainer",
+                "weight": 252.5,
+                "ID": 10
+            }
+        ],
+        "items": [
+            {
+                "item_type": "Liquid",
+                "ID": "9",
+                "weight": 250,
+                "count": 3,
+                "containerID": "10",
+                "specific_attribute": 35
+            }
+        ],
+        "ports_deliver": "3"
+    },
+   {
+        "ship_id": "5",
+        "latitude": 46.4667,
+        "longitude": 30.7333,
+        "fuel": 1000,
+        "totalWeightCapacity": 1200,
+        "maxNumberOfAllContainers": 25,
+        "maxNumberOfHeavyContainers": 6,
+        "maxNumberOfRefrigeratedContainers": 3,
+        "maxNumberOfLiquidContainers": 6,
+        "fuelConsumptionPerKM": 22,
+        "ship_type": "MediumShip",
+       "container" : [
+            {
+                "type": "LiquidContainer",
+                "weight": 124,
+                "ID": 14
+            }
+        ],
+        "items": [
+            {
+                "item_type": "Refrigerated",
+                "ID": "12",
+                "weight": 350,
+                "count": 4,
+                "containerID": "14",
+                "specific_attribute": 30
+            }
+        ],
+        "ports_deliver": "6"
+    },
+    {
+        "ship_id": "6",
+        "latitude": 37.9475,
+        "longitude": 23.6497,
+        "fuel": 1000,
+        "totalWeightCapacity": 1500,
+        "maxNumberOfAllContainers": 30,
+        "maxNumberOfHeavyContainers": 8,
+        "maxNumberOfRefrigeratedContainers": 4,
+        "maxNumberOfLiquidContainers": 8,
+        "fuelConsumptionPerKM": 25,
+        "ship_type": "HeavyShip",
+        "container" : [
+            {
+                "type": "LiquidContainer",
+                "weight": 120,
+                "ID": 17
+            },
+            {
+                "type": "BasicContainer",
+                "weight": 270,
+                "ID": 25
+            },
+             {
+                "type": "HeavyContainer",
+                "weight": 400,
+                "ID": 30
+            }
+        ],
+        "items": [
+            {
+                "item_type": "Liquid",
+                "ID": "15",
+                "weight": 250,
+                "count": 3,
+                "containerID": "17",
+                "specific_attribute": 35
+            },
+            {
+                "item_type": "Liquid",
+                "ID": "24",
+                "weight": 250,
+                "count": 4,
+                "containerID": "25",
+                "specific_attribute": 35
+            },
+            {
+                "item_type": "Liquid",
+                "ID": "29",
+                "weight": 250,
+                "count": 1,
+                "containerID": "30",
+                "specific_attribute": 35
+            }
+        ],
+        "ports_deliver": "5"
+    }
+]
