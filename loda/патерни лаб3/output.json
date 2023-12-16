@@ -1,0 +1,180 @@
+{
+    "Ports": [
+        {
+            "port": "af906c16-01f5-4f21-bf71-cdacecccb04d",
+            "latitutde": 30.679611380385474,
+            "longetude": 20.431802818142636,
+            "heavy_containers": [
+                "f9a6be9a-ab3b-4d1e-9998-0544bcfc42c0",
+                "fb0319a3-d8a8-4ff7-9782-51717272af62",
+                "cba5ef08-d0e9-42f1-bbee-02d1a41cf048",
+                "649024e5-6fde-4500-a184-120adbef5c4d",
+                "de574cd8-22be-4ff0-99ac-2122fb2867c3"
+            ],
+            "basic_containers": [
+                "ab20a4d3-6680-420e-8869-4d107a7b1f69",
+                "ad79d7c4-7c17-455f-a1f0-28579adde6d5",
+                "769e8a9e-4a3b-49e8-b247-3e047860b84e",
+                "405287b9-0336-436f-ab6a-91a4e5dff460",
+                "1325326a-74e2-4407-9c93-214883f94206",
+                "bac12830-2a10-4cfe-bd4d-e84d40f67b3a",
+                "f8ef626f-8190-4045-a671-432601da140c",
+                "4efe552a-474c-40e1-9fca-e46ed3001f4f",
+                "179bb3b8-e73d-43ef-86e3-59a00750b820",
+                "aef51b04-0892-421b-b830-25fef9322885",
+                "3cffbd08-fb63-4500-aa43-fd083d4faf1f",
+                "7265a3bf-077f-4052-b8ce-1e27f0ee5af5",
+                "2498a6dd-fd03-451f-9910-a6531fc7ab09",
+                "0abac15a-1af9-466c-953d-c2bf5ad3e137"
+            ],
+            "refrigerated_containers": [
+                "fb0319a3-d8a8-4ff7-9782-51717272af62",
+                "cba5ef08-d0e9-42f1-bbee-02d1a41cf048"
+            ],
+            "liquid_containers": [
+                "649024e5-6fde-4500-a184-120adbef5c4d",
+                "de574cd8-22be-4ff0-99ac-2122fb2867c3"
+            ],
+            "ships": [
+                "bdd2f615-46dd-4d82-a5c3-5ac2f05db3eb",
+                "d4512309-2b85-4eda-be25-61bb936c716c"
+            ]
+        },
+        {
+            "port": "33b730a7-6f60-4fe4-be0d-71294652f347",
+            "latitutde": 31.37381012524713,
+            "longetude": 21.31057179042768,
+            "heavy_containers": [
+                "c393d382-136b-44ba-8c7f-46d9a4c73e10",
+                "00b4cc39-6f20-41be-9bea-98f16dc5d134",
+                "c171b0b7-722e-4543-8255-8f3205dc3e8e",
+                "e9a6927c-b369-43bc-8f50-836745d2a994",
+                "f73ffe80-6307-4867-9e52-89f3facb3843",
+                "4942a4e4-cdcd-47e7-8ed5-d71d7cba64c1",
+                "c1c096ef-0363-42f7-adf6-da6e67350b95",
+                "9d72175b-09fe-4997-9240-864115a2df7a",
+                "1518015e-f496-4110-93be-8dd95b6200a4",
+                "f73ffe80-6307-4867-9e52-89f3facb3843",
+                "4942a4e4-cdcd-47e7-8ed5-d71d7cba64c1",
+                "c3845b8f-1195-413d-9260-65252fc24f59"
+            ],
+            "basic_containers": [
+                "3b84c6b0-dbff-4fb9-8a43-9d888457c54b",
+                "da94e0a1-ed73-46f2-805f-7d13c7a812aa",
+                "cd5df884-0ab5-459d-a505-fe8bc2f45f76",
+                "c5f33243-292b-45d9-ae39-492a9a2d2171",
+                "de7186b4-4019-4742-9270-258a4b2f3fdd",
+                "bc907aaa-91a5-4697-825f-7e945f2bc52b",
+                "ca6215a7-28b3-452e-8998-344332259b9a",
+                "c2bf54a8-5be4-40f3-8e8d-4793dcc2e592",
+                "3758d433-a54e-4a76-8e6c-776d9171cb1c",
+                "9901d41c-52b8-43f5-a983-fe87bbc27415",
+                "50bb7091-be96-407e-9a80-1ccea9d728f1"
+            ],
+            "refrigerated_containers": [
+                "f73ffe80-6307-4867-9e52-89f3facb3843",
+                "4942a4e4-cdcd-47e7-8ed5-d71d7cba64c1",
+                "f73ffe80-6307-4867-9e52-89f3facb3843",
+                "4942a4e4-cdcd-47e7-8ed5-d71d7cba64c1",
+                "c3845b8f-1195-413d-9260-65252fc24f59"
+            ],
+            "liquid_containers": [
+                "1518015e-f496-4110-93be-8dd95b6200a4"
+            ],
+            "ships": [
+                "19fe91f2-2d51-40f6-9f6d-ac6c5a78ece9",
+                "62254def-245e-4fac-80a2-bae8484c9e0d",
+                "654318ba-5e8f-4c0e-a20b-2d8244d480c4",
+                "da061600-c0aa-446c-9941-d245b8427140"
+            ]
+        },
+        {
+            "port": "31e03332-1a3a-413f-b8db-904c09d36a70",
+            "latitutde": 31.157684592229625,
+            "longetude": 21.594283740671248,
+            "heavy_containers": [
+                "c3845b8f-1195-413d-9260-65252fc24f59",
+                "1518015e-f496-4110-93be-8dd95b6200a4",
+                "6e46e0e2-7ffb-41c7-ad91-3d6071f78454",
+                "523ace40-745b-45cf-ae95-ba4fbb566911",
+                "84bee521-a05c-4574-81d4-2599e05a6228",
+                "583f14fb-3fa5-4652-b62f-dc1374a05e58",
+                "a285f976-4bdd-45f6-978c-60846fbd2e7a",
+                "de88e7b3-43bc-4d21-bb3c-430be0b815ab",
+                "49c35944-e6c9-4940-b092-9559e056bda6",
+                "d5d0d5c5-8cfc-4eb0-8cf7-3ceb648aee50",
+                "7420d930-c232-4619-ad90-6766fb01bc6a",
+                "09267971-5181-4830-953f-5e496e36a60c",
+                "471dbb46-72c4-4c43-b362-a90c3043de83",
+                "442e5b11-ee2b-41aa-b166-0b6905ef13ad",
+                "557f084e-af05-49c5-8511-881b39e859fa",
+                "7310b2d5-b7be-432a-aacb-67a52c1f3306",
+                "27e8f8ef-d935-4c77-8551-4d8824ce8fe4",
+                "d0e911f2-e0b8-44c4-ae6d-ab182b13001a",
+                "96872814-53d1-4656-833f-70702908329b",
+                "8f2f99d6-fdd4-4805-9982-d95b1892a44c",
+                "ca449a7c-cbc3-4eb1-81b4-2fa08f04264d",
+                "571b2d0a-5f9a-4723-bdbd-3475c5444382"
+            ],
+            "basic_containers": [
+                "ab1a33c8-599a-4c4b-bb9d-8f66a0130498",
+                "ce24af85-ce4b-4a84-96c4-7e9f946d1375",
+                "60f71997-0377-424c-90e0-ab1754e14550",
+                "db05ea40-c754-452f-a017-e1bbc8287a20",
+                "36b0156a-9a11-498c-b55c-1869dadcb3b5",
+                "33deb79e-fc3b-422b-8196-4de138ea68cb",
+                "c3593542-80f4-4aa3-b379-30171dc74e80",
+                "ee8dd02e-9901-4d74-a252-9cc780fdee68",
+                "497fdad2-68a5-44cf-8bdf-8f6fcfc80d55",
+                "86584c34-c9c8-45f4-a083-4d348cdb3999",
+                "340ecd97-5c33-4c07-b5ef-70132b624175",
+                "48c6e09e-0049-4dae-a5d7-fbb59b0203ef",
+                "6e95899e-c3b0-45af-a2cd-dd5095b1f02a",
+                "2e6de320-f15d-4ed9-845f-678e4fd1ccde",
+                "7f684b2d-8ac2-49ec-a90a-d7b16748f40c",
+                "7194db2b-0867-4b8f-bd77-3439cd34fa5c",
+                "38d8025b-029b-4997-99f1-1b7446be606c",
+                "e8677686-e00a-4d91-b709-1ed2b3f8b447",
+                "32065da3-18e1-4885-848e-ba3f8fd51001"
+            ],
+            "refrigerated_containers": [
+                "ca449a7c-cbc3-4eb1-81b4-2fa08f04264d",
+                "571b2d0a-5f9a-4723-bdbd-3475c5444382"
+            ],
+            "liquid_containers": [],
+            "ships": [
+                "9a891650-c9b1-49ae-a99b-2bdc663e3b07",
+                "24d9d01a-711f-4473-ab27-7d42e72598f6",
+                "04cbefbe-431c-4559-af51-75675d576f4b"
+            ]
+        },
+        {
+            "port": "08b784b4-cdc1-4bd6-b2c7-c71d32cdaf37",
+            "latitutde": 30.42539900613322,
+            "longetude": 20.57391417101186,
+            "heavy_containers": [],
+            "basic_containers": [],
+            "refrigerated_containers": [],
+            "liquid_containers": [],
+            "ships": []
+        },
+        {
+            "port": "8d7ab7fe-7e8c-4190-a444-8db925d8e831",
+            "latitutde": 31.784188882102335,
+            "longetude": 20.22562671955767,
+            "heavy_containers": [
+                "0ff88020-6c6d-4a48-aafc-52258bf10694",
+                "571b2d0a-5f9a-4723-bdbd-3475c5444382"
+            ],
+            "basic_containers": [
+                "f691f033-757f-486c-9274-c59b7e654a3e",
+                "a9bc2c81-f895-4942-b91b-ed522473a5cd"
+            ],
+            "refrigerated_containers": [],
+            "liquid_containers": [],
+            "ships": [
+                "eb67fb59-01c3-41c8-b451-c6df3ffd287f"
+            ]
+        }
+    ]
+}
