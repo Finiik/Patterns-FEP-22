@@ -1,10 +1,10 @@
-from credit_card import CreditCard
-from fastapi import FastAPI, HTTPException, Depends
-from sqlalchemy.orm import Session
+# main.py (FastAPI application)
+from fastapi import FastAPI, Depends, HTTPException, Body
 from sqlalchemy import create_engine
-from bank_customer import BankCustomer
-from bank_info import BankInfoModel
-from models import Base, BankCustomerTable
+from sqlalchemy.orm import Session
+from models import Base, Stock, Order  # Assuming you have a Product model
+from order_facade import OrderFacade  # Assuming you have an OrderFacade class
+from inventory_subs import Stock, UpdateStock  # Assuming you have a Stock class
 
 app = FastAPI()
 
@@ -20,32 +20,36 @@ def get_db():
         db.close()
 
 
-@app.post("/customers/", response_model=BankInfoModel, status_code=200)
-def add_customer(customer: BankCustomer, db: Session = Depends(get_db)):
-    db.add(customer)
+@app.post("/update_stock")
+def update_stock_with_products(stock: UpdateStock, db: Session = Depends(get_db)):
+    item_in_stock = {
+        "product_name": stock.product_name,
+        "price": stock.price,
+        "action": stock.action,
+        "quantity": stock.quantity
+    }
+    stock.update_stock(stock.product_name, stock.price, stock.action, stock.quantity)
+    new_item = Stock(product_name=stock.product_name, price=stock.price, quantity=stock.quantity)
+    db.add(new_item)
     db.commit()
-    db.refresh(customer)
-    return {"message": "Customer added successfully!", "customer": customer}
+    return item_in_stock
 
 
-# Add a credit card
-@app.post("/creditcards/", status_code=200)
-def add_credit_card(credit_card: CreditCard, db: Session = Depends(get_db)):
-    db.add(credit_card)
+def execute_do_operation(card_number: str, expiration_date: str,
+                         cvv: str, destination: str, weight: float, products: list[dict], db: Session = Depends(get_db)):
+    order_facade = OrderFacade()
+
+    new_order = Order(card_number=card_number, expiration_date=expiration_date, cvv=cvv,
+                      destination=destination, weight=weight)
+    db.add(new_order)
     db.commit()
-    db.refresh(credit_card)
-    return {"message": "Credit card added successfully!", "credit_card_id": credit_card.id}
+
+    order_facade.doOperation(products, card_number, expiration_date, cvv, destination, weight)
 
 
-@app.get("/transactions/{account_number}", status_code=200)
-def show_transaction_list(account_number: str, db: Session = Depends(get_db)):
-    customer = db.query(BankCustomerTable).filter(BankCustomerTable.personal_info.account_number == account_number).first()
-    if not customer:
-        raise HTTPException(status_code=404, detail="Customer not found")
-
-    transactions = customer.bank_info.transaction_list(account_number)
-    if transactions:
-        return {"transactions": transactions}
-    else:
-        return {"message": "No transactions found for the account number"}
-
+@app.post("/execute_do_operation")
+def execute_do_operation_endpoint(
+    card_number: str, expiration_date: str, cvv: str, destination: str, weight: float, products: list[dict] = Body(...), db: Session = Depends(get_db)
+):
+    execute_do_operation(card_number, expiration_date, cvv, destination, weight, products, db)
+    return {"message": "doOperation executed successfully!"}

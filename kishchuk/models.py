@@ -1,53 +1,74 @@
-from sqlalchemy import ( Column,
-                         Integer,
-                         String,
-                         Float,
-                         PickleType,
-                         Boolean,
-                         )
-from sqlalchemy.orm import (
-                            declarative_base,
-)
+from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey
+from sqlalchemy.orm import declarative_base, relationship, sessionmaker
+
 Base = declarative_base()
 
 
-class CreditCardTable(Base):
-    __tablename__ = 'credit_cards'
+class Product(Base):
+    __tablename__ = 'products'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    client = Column(String, nullable=False)
-    account_number = Column(String, unique=True, nullable=False)
-    credit_limit = Column(Float, nullable=False)
-    grace_period = Column(Integer, nullable=False)
-    cvv_hash = Column(PickleType)
-
-
-class PersonalInfoTable(Base):
-    __tablename__ = 'personal_info'
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
-    client_type = Column(String, nullable=False)
-    account_number = Column(String, unique=True, nullable=False)
+    value = Column(Float, nullable=False)
+
+
+class CardDetails(Base):
+    __tablename__ = 'card_details'
+
+    id = Column(Integer, primary_key=True)
+    card_number = Column(String, nullable=False)
+    expiration_date = Column(String, nullable=False)
     cvv = Column(String, nullable=False)
 
 
-class BankInfoTable(Base):
-    __tablename__ = 'bank_info'
+class ShipmentDetails(Base):
+    __tablename__ = 'shipment_details'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    bank_name = Column(String, nullable=False)
-    holder_name = Column(String, nullable=False)
-    accounts_number = Column(String, nullable=True)
-    credit_history = Column(String, nullable=True)
+    id = Column(Integer, primary_key=True)
+    destination = Column(String, nullable=False)
+    weight = Column(Float, nullable=False)
 
 
-class BankCustomerTable(Base):
-    __tablename__ = 'bank_customer'
+class ShipmentProvider(Base):
+    __tablename__ = 'shipment_providers'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    personal_info_id = Column(Integer, nullable=False)
-    bank_info_id = Column(Integer, nullable=False)
-    vip_status = Column(Boolean, default=False)
-    individual_status = Column(Boolean, default=False)
-    corporate_status = Column(Boolean, default=False)
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+
+
+class Stock(Base):
+    __tablename__ = 'stock'
+
+    id = Column(Integer, primary_key=True)
+    product_name = Column(String, nullable=False)
+    price = Column(Integer, nullable=False)
+    quantity = Column(Integer, nullable=False)
+
+
+class Payment(Base):
+    __tablename__ = 'payments'
+
+    id = Column(Integer, primary_key=True)
+    card_id = Column(Integer, ForeignKey('card_details.id'))
+    card = relationship('CardDetails')
+
+
+class Shipment(Base):
+    __tablename__ = 'shipments'
+
+    id = Column(Integer, primary_key=True)
+    shipment_provider_id = Column(Integer, ForeignKey('shipment_providers.id'))
+    shipment_provider = relationship('ShipmentProvider')
+    shipment_details_id = Column(Integer, ForeignKey('shipment_details.id'))
+    shipment_details = relationship('ShipmentDetails')
+
+
+class Order(Base):
+    __tablename__ = 'orders'
+
+    id = Column(Integer, primary_key=True, index=True)
+    card_number = Column(String, index=True)
+    expiration_date = Column(String)
+    cvv = Column(String)
+    destination = Column(String)
+    weight = Column(Float)

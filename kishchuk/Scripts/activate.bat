@@ -1,4 +1,4 @@
-@set "VIRTUAL_ENV=C:\Users\kondr\Desktop\uni_2_year\LABS\patterns\lab_5"
+@set "VIRTUAL_ENV=C:\Users\kondr\Desktop\uni_2_year\LABS\patterns\lab_6"
 
 @set "VIRTUAL_ENV_PROMPT="
 @if NOT DEFINED VIRTUAL_ENV_PROMPT (

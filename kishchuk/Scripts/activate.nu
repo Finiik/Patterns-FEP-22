@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = 'C:\Users\kondr\Desktop\uni_2_year\LABS\patterns\lab_5'
+    let virtual_env = 'C:\Users\kondr\Desktop\uni_2_year\LABS\patterns\lab_6'
     let bin = 'Scripts'
 
     let is_windows = ($nu.os-info.family) == 'windows'
