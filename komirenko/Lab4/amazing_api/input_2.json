@@ -1,0 +1,210 @@
+{
+  "ports":
+[
+{
+    "port_id": "1",
+    "title": "Amsterdam",
+    "ships": [
+      {
+        "ship_id": "1",
+        "port_id": "1",
+        "ports_deliver": "2",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "MediumShip",
+        "title": "Pegas",
+        "fuel": 10000
+      }
+    ],
+    "containers": 6,
+    "basic": 1,
+    "heavy": 7,
+    "refrigerated": 5,
+    "liquid": 1
+  },
+  {
+    "port_id": "2",
+    "title": "Odesa",
+    "ships": [
+      {
+        "ship_id": "2",
+        "port_id": "2",
+        "ports_deliver": "1",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "HeavyShip",
+        "title": "Aurora",
+        "fuel": 10000
+      },
+      {
+        "ship_id": "3",
+        "port_id": "2",
+        "ports_deliver": "5",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "LightWeightShip",
+        "title": "Andromeda",
+        "fuel": 10000
+      }
+    ],
+    "containers": 18,
+    "basic": 10,
+    "heavy": 4,
+    "refrigerated": 3,
+    "liquid": 5
+  },
+  {
+    "port_id": "3",
+    "title": "Humburg",
+    "ships": [
+      {
+        "ship_id": "4",
+        "port_id": "3",
+        "ports_deliver": "4",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "HeavyShip",
+        "title": "Gera",
+        "fuel": 10000
+      }
+    ],
+    "containers": 4,
+    "basic": 7,
+    "heavy": 7,
+    "refrigerated": 4,
+    "liquid": 4
+  },
+  {
+    "port_id": "4",
+    "title": "Liverpul",
+    "ships": [
+      {
+        "ship_id": "5",
+        "port_id": "4",
+        "ports_deliver": "3",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "HeavyShip",
+        "title": "Aid",
+        "fuel": 10000
+      },
+      {
+        "ship_id": "6",
+        "port_id": "4",
+        "ports_deliver": "2",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "HeavyShip",
+        "title": "Titanic",
+        "fuel": 10000
+      },
+      {
+        "ship_id": "7",
+        "port_id": "4",
+        "ports_deliver": "3",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "LightWeightShip",
+        "title": "Zevs",
+        "fuel": 10000
+      },
+      {
+        "ship_id": "8",
+        "port_id": "4",
+        "ports_deliver": "5",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "HeavyShip",
+        "title": "Artemida",
+        "fuel": 10000
+      },
+      {
+        "ship_id": "9",
+        "port_id": "4",
+        "ports_deliver": "1",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "MediumShip",
+        "title": "Apolon",
+        "fuel": 10000
+      }
+    ],
+    "containers": 15,
+    "basic": 3,
+    "heavy": 7,
+    "refrigerated": 2,
+    "liquid": 2
+  },
+  {
+    "port_id": "5",
+    "title": "Marsele",
+    "ships": [
+      {
+        "ship_id": "10",
+        "port_id": "5",
+        "ports_deliver": "2",
+        "totalWeightCapacity": 1000,
+        "maxNumberOfAllContainers": 20,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 5,
+        "maxNumberOfBasicContainers": 8,
+        "fuelConsumptionPerKM": 20,
+        "ship_type": "MediumShip",
+        "title": "The Last",
+        "fuel": 10000
+      }
+    ],
+    "containers": 11,
+    "basic": 2,
+    "heavy": 6,
+    "refrigerated": 1,
+    "liquid": 1
+  }
+]
+}
