@@ -1,0 +1,24 @@
+{
+    "ships": [
+        {
+            "ship_id": 1,
+            "port_id": 1,
+            "max_weight": 10000,
+            "max_containers": 5,
+            "max_heavy_containers": 3,
+            "max_refrigerated": 2,
+            "max_liquid": 1,
+            "fuel_consumption": 0.05
+        },
+        {
+            "ship_id": 2,
+            "port_id": 2,
+            "max_weight": 12000,
+            "max_containers": 6,
+            "max_heavy_containers": 4,
+            "max_refrigerated": 2,
+            "max_liquid": 1,
+            "fuel_consumption": 0.04
+        }
+    ]
+}

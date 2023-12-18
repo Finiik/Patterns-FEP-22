@@ -1,0 +1,9 @@
+{
+    "events": [
+        { "event_type": "load_container", "ship_id": 1, "container_id": 1 },
+        { "event_type": "load_container", "ship_id": 1, "container_id": 2 },
+        { "event_type": "sail_to_port", "ship_id": 1, "destination_port": 2 },
+        { "event_type": "unload_container", "ship_id": 1, "container_id": 2 },
+        { "event_type": "refuel_ship", "ship_id": 1 }
+    ]
+}
